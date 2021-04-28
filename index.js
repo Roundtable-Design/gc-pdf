@@ -31,6 +31,10 @@ const queryString = require("query-string");
 // 	)
 // );
 
+app.get("/", (req, res) => {
+	res.send("Active");
+});
+
 app.get("/poster", async ({ query: { data } }, res) => {
 	let template = await fs.promises.readFile("./template.html", "utf8");
 
