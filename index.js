@@ -11,27 +11,25 @@ const PORT = 3000;
 
 const queryString = require("query-string");
 
-console.log(
-	queryString.stringify(
-		{
-			data: [
-				"My practices are so and so",
-				"My practices are not",
-				"My practices are so and so",
-				"My practices are not",
-				"My practices are so and so",
-				"My practices are not",
-				"My practices are so and so",
-				"My practices are not",
-				"My practices are so and so",
-				"My practices are not",
-			],
-		},
-		{ arrayFormat: "index" }
-	)
-);
-
-console.log("{{0}} hello yeah dude!".replace("{{0}}", "sdflsdfl"));
+// console.log(
+// 	queryString.stringify(
+// 		{
+// 			data: [
+// 				"My practices are so and so",
+// 				"My practices are not",
+// 				"My practices are so and so",
+// 				"My practices are not",
+// 				"My practices are so and so",
+// 				"My practices are not",
+// 				"My practices are so and so",
+// 				"My practices are not",
+// 				"My practices are so and so",
+// 				"My practices are not",
+// 			],
+// 		},
+// 		{ arrayFormat: "index" }
+// 	)
+// );
 
 app.get("/poster", async ({ query: { data } }, res) => {
 	let template = await fs.promises.readFile("./template.html", "utf8");
