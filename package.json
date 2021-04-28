@@ -1,0 +1,25 @@
+{
+  "name": "gc-pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roundtable-Design/gc-pdf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roundtable-Design/gc-pdf/issues"
+  },
+  "homepage": "https://github.com/Roundtable-Design/gc-pdf#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "html-pdf": "^3.0.0",
+    "query-string": "^7.0.0"
+  }
+}

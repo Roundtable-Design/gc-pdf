@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+            @font-face {
+                font-family: NeueHaasLight;
+                src: url("file:///Users/gilbertvirgo/gc-pdf/Light.ttf") format("truetype");
+            }
+
+            @font-face {
+                font-family: NeueHaasRoman;
+                src: url("file:///Users/gilbertvirgo/gc-pdf/Roman.ttf") format("truetype");
+            }
+
+            *{box-sizing: border-box;}
+            
+            body{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            h5{
+                margin: 0;
+                padding: 0; 
+            }
+            .module{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .moduleTitle{
+                height: 4.77mm;
+                width: 136.525mm;
+                font-family: Times;
+                font-style: italic;
+                font-weight: bold;
+                font-size: 4.23mm;
+                line-height: 4.77mm;
+
+                color: #000000;
+                margin: 1.33mm auto;
+            }
+            table{
+                width: 136.525mm; 
+                table-layout: fixed;
+                border-spacing: 0;
+                margin: 0 auto;
+            }
+            tr, td{
+                width: 100%;
+                border-top: 1px solid rgba(0, 0, 0, 0.30);
+            }
+            tr{
+                height: 7.15mm;
+                padding-bottom:2.12mm;
+            }
+            td{
+                height: 9.53mm;
+                vertical-align:top;
+                overflow: hidden;
+                /* white-space: nowrap; */
+                /* text-overflow: ellipsis; */
+            }
+            .title{
+                width: 37.56mm;
+                height: 7.15mm;
+
+                font-family: NeueHaasLight;
+                /* font-style: normal; */
+                /* font-weight: 300; */
+                font-size: 6.35mm;
+                line-height: 7.15mm;
+
+                padding-bottom: 4mm;
+            }
+            .description{
+                width: 98.96mm;
+                height: 9.53mm;
+                overflow: hidden;
+
+                font-family: NeueHaasRoman;
+                /* font-style: normal; */
+                /* font-weight: 500; */
+                font-size: 3.71mm;
+                line-height: 4.77mm;
+                color: #000000;
+
+                padding: 0.53mm 0;
+            }
+            img{
+                /* max-width: 17.4625mm;
+                max-height: 17.4625mm; */
+                display: block; 
+                margin: 0 auto;
+                width: 136px;
+                padding-bottom: 15.35mm;
+                padding-top: 17.4625mm;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="file:///Users/gilbertvirgo/gc-pdf/title.svg">
+        <div class="module">
+            <h5 class="moduleTitle">Garden Practices</h5>
+            <table class="practice">
+                <tr>
+                    <td class="title">Prayer</td>
+                    <td class="description">{{0}}</td>  
+                </tr> 
+                <tr> 
+                    <td class="title">Worship</td>
+                    <td class="description">{{1}}</td>  
+                </tr> 
+                <tr> 
+                    <td class="title">Community</td>
+                    <td class="description">{{2}}</td>  
+                </tr> 
+                <tr>
+                    <td class="title">Service</td>
+                    <td class="description">{{3}}</td>  
+                </tr> 
+                <tr> 
+                    <td class="title">Generosity</td>
+                    <td class="description">{{4}}</td>  
+                </tr> 
+                <tr> 
+                    <td class="title">Steward</td>
+                    <td class="description">{{5}}</td>  
+                </tr> 
+                <tr> 
+                    <td class="title">Vocation</td>
+                    <td class="description">{{6}}</td>  
+                </tr> 
+                <tr> 
+                    <td class="title">Sabbath</td>
+                    <td class="description">{{7}}</td>  
+                </tr> 
+            </table>
+        <div>
+
+        <div class="module">
+            <h5 class="moduleTitle">Weekly Practices</h5>
+            <table class="practice">
+                
+                <tr> 
+                    <td class="title">Mind</td>
+                    <td class="description">{{8}}</td>  
+                </tr> 
+                <tr>
+                    <td class="title">Body</td>
+                    <td class="description">{{9}}</td>  
+                </tr> 
+                <tr>
+                    <td class="title">Heart</td>
+                    <td class="description">{{10}}</td>  
+                </tr> 
+                
+            </table>
+        <div>
+    </body>
+</html>
