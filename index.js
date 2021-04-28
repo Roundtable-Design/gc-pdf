@@ -1,6 +1,8 @@
+require("dotenv").config();
+
 var fs = require("fs");
 var pdf = require("html-pdf");
-// var html = fs.readFileSync("./Print-letter.html", "utf8");
+// var html = fs.readFileSync("./template.html", "utf8");
 var options = { format: "Letter" };
 
 const express = require("express");
@@ -32,13 +34,15 @@ console.log(
 console.log("{{0}} hello yeah dude!".replace("{{0}}", "sdflsdfl"));
 
 app.get("/poster", async ({ query: { data } }, res) => {
-	let template = await fs.promises.readFile("./Print-letter.html", "utf8");
+	let template = await fs.promises.readFile("./template.html", "utf8");
 
 	const results = decodeURIComponent(data).split(",");
 
 	results.forEach((result, index) => {
 		template = template.replace(`{{${index}}}`, result);
 	});
+
+	template = template.replace("{{project-root}}", process.env.PROJECT_ROOT);
 
 	const buffer = await new Promise((resolve, reject) => {
 		pdf.create(template, options).toBuffer((error, buffer) => {

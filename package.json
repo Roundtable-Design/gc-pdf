@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Roundtable-Design/gc-pdf#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "html-pdf": "^3.0.0",
     "query-string": "^7.0.0"
