@@ -48,7 +48,7 @@ app.get("/poster", async ({ query: { data } }, res) => {
 
 	const buffer = await new Promise((resolve, reject) => {
 		pdf.create(template, options).toBuffer((error, buffer) => {
-			if (error) reject(err);
+			if (error) reject(error);
 			resolve(buffer);
 		});
 	}).catch(console.error);
