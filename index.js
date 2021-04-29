@@ -2,34 +2,11 @@ require("dotenv").config();
 
 var fs = require("fs");
 var pdf = require("html-pdf");
-// var html = fs.readFileSync("./template.html", "utf8");
 var options = { format: "Letter" };
 
 const express = require("express");
 const app = express();
 const PORT = 3000;
-
-const queryString = require("query-string");
-
-// console.log(
-// 	queryString.stringify(
-// 		{
-// 			data: [
-// 				"My practices are so and so",
-// 				"My practices are not",
-// 				"My practices are so and so",
-// 				"My practices are not",
-// 				"My practices are so and so",
-// 				"My practices are not",
-// 				"My practices are so and so",
-// 				"My practices are not",
-// 				"My practices are so and so",
-// 				"My practices are not",
-// 			],
-// 		},
-// 		{ arrayFormat: "index" }
-// 	)
-// );
 
 app.get("/", (req, res) => {
 	res.send("Active");
