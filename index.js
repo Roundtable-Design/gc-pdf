@@ -12,6 +12,16 @@ app.get("/", (req, res) => {
 	res.send("Active");
 });
 
+app.post("/poster", async (req, res) => {
+	let template = await fs.promises.readFile("./template.html", "utf8");
+
+	pdf.create(template, options).toStream((error, stream) => {
+		if (error) reject(error);
+		res.set("Content-type", "application/pdf");
+		stream.pipe(res);
+	});
+});
+
 app.get("/poster", async ({ query: { data } }, res) => {
 	let template = await fs.promises.readFile("./template.html", "utf8");
 
