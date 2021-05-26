@@ -25,10 +25,8 @@ app.post("/poster", async (req, res) => {
 app.get("/poster", async ({ query: { data } }, res) => {
 	let template = await fs.promises.readFile("./template.html", "utf8");
 
-	const results = decodeURIComponent(data).split(",");
-
-	results.forEach((result, index) => {
-		template = template.replace(`{{${index}}}`, result);
+	data.forEach((result, index) => {
+		template = template.replace(`{{${index}}}`, decodeURIComponent(result));
 	});
 
 	template = template.replace("{{project-root}}", process.env.PROJECT_ROOT);
